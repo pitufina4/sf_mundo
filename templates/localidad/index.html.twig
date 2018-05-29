@@ -1,0 +1,12 @@
+{% block body %}
+
+ <h1>Listado de localidades</h1>
+
+	<ul>
+	    {% for localidad in localidades %}
+	        <li>{{ localidad.nombre }} - {{ localidad.area}} - {{ localidad.habitantes }} - {{ localidad.cp }}</li>
+	    {% endfor %}
+	</ul>
+	<a href=" {{ path('localidad_nuevo')}}">Añadir localidad</a>
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block body %}
+
+ <h1>Listado de presidentes<h1>
+ 
+		<ul>
+	    
+	      <li>
+	      	{{ presidente.id }} -
+	      	{{ presidente.nombre }} - 
+	      	{{ presidente.fechanac|date('Y-m-d')}} 
+	      	{{ pais.presidente.nombre }} 
+	      </li>
+
+		</ul>
+			   
+
+	<a href=" {{ path('presidente_nuevo') }}"> Añadir presidente</a>
+
+
+{{ dump(presidente) }}
+
+{% endblock %}

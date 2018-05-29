@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Monumento{% endblock %}
+
+{% block body %}
+    <h1>Monumento</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ monumento.id }}</td>
+            </tr>
+            <tr>
+                <th>Nombre</th>
+                <td>{{ monumento.nombre }}</td>
+            </tr>
+            <tr>
+                <th>Ano</th>
+                <td>{{ monumento.ano }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('monumento_index') }}">back to list</a>
+
+    <a href="{{ path('monumento_edit', {'id': monumento.id}) }}">edit</a>
+
+    {{ include('monumento/_delete_form.html.twig') }}
+{% endblock %}

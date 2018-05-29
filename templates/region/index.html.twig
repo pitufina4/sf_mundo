@@ -1,0 +1,12 @@
+{% block body %}
+
+ <h1>Listado de regiones</h1>
+
+	<ul>
+	    {% for pais in listaregiones %}
+	        <li>{{ region.nombre }} - {{ region.idioma }} - {{ region.pais.nombre}} </li>
+	    {% endfor %}
+	</ul>
+	<a href=" {{ path('region_nuevo')}}">Añadir region</a>
+
+{% endblock %}

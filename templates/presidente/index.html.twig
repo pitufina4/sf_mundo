@@ -1,0 +1,12 @@
+{% block body %}
+
+ <h1>Listado de presidentes</h1>
+
+	<ul>
+	    {% for presidente in listapresidentes %}
+	        <li>{{ presidente.nombre }} - {{ presidente.fechanac|date('Y-m-d')}} </li>
+	    {% endfor %}
+	</ul>
+	<a href=" {{ path('presidente_nuevo')}}">Añadir presidente</a>
+
+{% endblock %}

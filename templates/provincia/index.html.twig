@@ -1,0 +1,12 @@
+{% block body %}
+
+ <h1>Listado de provincias</h1>
+
+	<ul>
+	    {% for pais in listaprovincias %}
+	        <li>{{ provincia.nombre }} - {{ provincia.continente }} - {{ provincia.presidente }} </li>
+	    {% endfor %}
+	</ul>
+	<a href=" {{ path('provincia_nuevo')}}">Añadir provincia</a>
+
+{% endblock %}

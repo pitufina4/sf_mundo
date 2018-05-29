@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block body %}
+
+ <h1>Listado de paises<h1>
+ 
+		<ul>
+	    
+	      <li>
+	      	{{ pais.id }} -
+	      	{{ pais.nombre }} - 
+	      	{{ pais.continente }} - 
+	      	{{ pais.presidente.nombre }} 
+	      </li>
+
+		</ul>
+			   
+
+	<a href=" {{ path('pais_nuevo') }}">Añadir pais</a>
+
+
+{{ dump(pais) }}
+
+{% endblock %}

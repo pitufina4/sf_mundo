@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Monumento index{% endblock %}
+
+{% block body %}
+    <h1>Monumento index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Ano</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for monumento in monumentos %}
+            <tr>
+                <td>{{ monumento.id }}</td>
+                <td>{{ monumento.nombre }}</td>
+                <td>{{ monumento.ano }}</td>
+                <td>
+                    <a href="{{ path('monumento_show', {'id': monumento.id}) }}">show</a>
+                    <a href="{{ path('monumento_edit', {'id': monumento.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('monumento_new') }}">Create new</a>
+{% endblock %}

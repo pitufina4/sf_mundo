@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block body %}
+
+ <h1>Listado de regiones<h1>
+ 
+		<ul>
+	    
+	        <li>
+	        	{{ region.id}} -
+	        	{{ region.nombre }} - 
+	        	{{ region.idioma }} -
+	        	{{ region.pais.nombre }} -
+			</li>
+
+		</ul>
+			   
+
+	<a href=" {{ path('region_nuevo') }}">Añadir region</a>
+
+
+{{ dump(region) }}
+
+{% endblock %}
